@@ -1,0 +1,8 @@
+create procedure SP_171111023_171111008_3()
+select a.ID_KARYAWAN,a.NAMA_KARYAWAN,b.NAMA_TOKO,b.KOTA___TOKO,
+count(c.ID_KARYAWAN),sum(d.JUMLAH_BARANG),sum(d.SUB_TOTAL) from 
+TOKO b join KARYAWAN a  on a.ID_TOKO = b.ID_TOKO join PEMBELIAN c on 
+a.ID_KARYAWAN = c.ID_KARYAWAN join DETAIL_PEMBELIAN d on c.ID_PEMBELIAN = d.ID_PEMBELIAN 
+group by b.KOTA___TOKO order by sum(d.SUB_TOTAL) desc;
+
+call SP_171111023_171111008_3

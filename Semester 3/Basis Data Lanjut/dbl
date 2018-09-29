@@ -1,0 +1,13 @@
+select sum(b.SUB_TOTAL),substring(a.tanggal,1,7) from PEMBELIAN a join DETAIL_PEMBELIAN b on a.ID_PEMBELIAN = b.ID_PEMBELIAN group by substring(a.TANGGAL,1,7)
+select sum(b.SUB_TOTAL),substring(a.tanggal,1,7) from PEMBELIAN a join DETAIL_PEMBELIAN b on a.ID_PEMBELIAN = b.ID_PEMBELIAN where substring(a.TANGGAL,1,7) = "2018-04" 
+
+
+
+
+
+docker run -p 3306:3306 --name bijan -v /mnt/b2c7efbf-ef52-437d-8ca7-e46ea581cbba/Kuliah/Semester\ 3/mysql/:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=bijan -d wongko/mysql:0.4
+
+
+new update
+
+docker run -p 3306:3306 --name bijan -v /mnt/b2c7efbf-ef52-437d-8ca7-e46ea581cbba/Kuliah/mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=bijan -d wongko/mysql:0.4

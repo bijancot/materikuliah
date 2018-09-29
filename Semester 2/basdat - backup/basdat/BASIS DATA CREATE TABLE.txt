@@ -1,0 +1,210 @@
+srv300620181
+pryk300620181
+lntra
+prems
+INV300620181
+ready
+not ready
+EMPT4805
+own200620186667
+REP01072018OWN01072018AG
+
+MariaDB [arm]> create table tabel_survei(
+    -> nomor_survei varchar(12) not null,
+    -> deskripsi_kerusakan varchar(150) not null,
+    -> tanggal_survei datetime not null,
+    -> primary key (nomor_survei));
+Query OK, 0 rows affected (0.32 sec)
+
+MariaDB [arm]> create table tabel_proyek(
+    -> nomor_proyek varchar(13) not null,
+    -> alamat_proyek varchar(200) not null,
+    -> besaran_proyek int(11) not null,
+    -> tanggal_mulai date not null,
+    -> lama_pekerjaan int(3) not null,
+    -> nomor_survei varchar(13) not null,
+    -> foreign key (nomor_survei) references tabel_survei(nomor_survei),
+    -> primary key (nomor_proyek));
+Query OK, 0 rows affected (0.20 sec)
+
+MariaDB [arm]> create table tabel_gudang(
+    -> kode_obat varchar(5) not null,
+    -> nama_obat varchar(75) not null,
+    -> banyak_obat int(4) not null,
+    -> kandungan_obat varchar(18) not null,
+    -> primary key (kode_altrerobat));
+Query OK, 0 rows affected (0.24 sec)
+
+MariaDB [arm]> create table tabel_inventaris(
+    -> nomor_inventaris varchar(12) not null,
+    -> nama_inventaris varchar(50) not null,
+    -> deskripsi_inventaris varchar(150) not null,
+    -> status_inventaris varchar(10) not null,
+    -> primary key (nomor_inventaris));
+Query OK, 0 rows affected (0.23 sec)
+
+MariaDB [arm]> create table tabel_karyawan(
+    -> kode_karyawan varchar(8) not null,
+    -> nama_karyawan varchar(50) not null,
+    -> alamat_karyawan varchar(100) not null,
+    -> keahlian varchar(10) not null,
+    -> kontak_karyawan varchar(15) not null,
+    -> primary key(kode_karyawan));
+Query OK, 0 rows affected (0.26 sec)
+
+MariaDB [arm]> create table tabel_pemilik(
+    -> kode_pemilik varchar(15) not null,
+    -> nama_pemilik varchar(60) not null,
+    -> kontak_pemilik varchar(20) not null,
+    -> alamat_pemilik varchar(150) not null,
+    -> primary key(kode_pemilik));
+Query OK, 0 rows affected (0.23 sec)
+
+MariaDB [arm]> create table tabel_laporan(
+    -> nomor_laporan varchar(25) not null,
+    -> nomor_proyek varchar(13) not null,
+    -> kode_pemilik varchar(15) not null,
+    -> kode_karyawan varchar(8) not null,
+    -> nomor_inventaris varchar(12) not null,
+    -> kode_obat varchar(5) not null,
+    -> tanggal_laporan date not null,
+    -> primary key(nomor_laporan),
+    -> foreign key (nomor_proyek) references tabel_proyek(nomor_proyek),
+    -> foreign key (kode_pemilik) references tabel_pemilik(kode_pemilik),
+    -> foreign key (kode_karyawan) references tabel_karyawan(kode_karyawan),
+    -> foreign key (nomor_inventaris) references tabel_inventaris(nomor_inventaris),
+    -> foreign key (kode_obat) references tabel_gudang(kode_obat));
+Query OK, 0 rows affected (0.29 sec)
+
+
+
+
+
+
+MariaDB [arm]> desc tabel_karyawan;
++-----------------+--------------+------+-----+---------+-------+
+| Field           | Type         | Null | Key | Default | Extra |
++-----------------+--------------+------+-----+---------+-------+
+| kode_karyawan   | varchar(8)   | NO   | PRI | NULL    |       |
+| nama_karyawan   | varchar(50)  | NO   |     | NULL    |       |
+| alamat_karyawan | varchar(100) | NO   |     | NULL    |       |
+| keahlian        | varchar(10)  | NO   |     | NULL    |       |
+| kontak_karyawan | varchar(15)  | NO   |     | NULL    |       |
++-----------------+--------------+------+-----+---------+-------+
+5 rows in set (0.04 sec)
+
+MariaDB [arm]> insert into tabel_karyawan values("EMPT4085","Pak Tain","Karangploso View","Teknisi","085755674805");
+Query OK, 1 row affected (0.19 sec)
+
+
+MariaDB [arm]> desc tabel_gudang;
++----------------+-------------+------+-----+---------+-------+
+| Field          | Type        | Null | Key | Default | Extra |
++----------------+-------------+------+-----+---------+-------+
+| kode_obat      | varchar(5)  | NO   | PRI | NULL    |       |
+| nama_obat      | varchar(75) | NO   |     | NULL    |       |
+| banyak_obat    | int(4)      | NO   |     | NULL    |       |
+| kandungan_obat | varchar(20) | NO   |     | NULL    |       |
++----------------+-------------+------+-----+---------+-------+
+4 rows in set (0.18 sec)
+
+MariaDB [arm]> insert into tabel_gudang values("LNTRA","LENTRA 200SL","8000","Alphametrin");
+Query OK, 1 row affected (0.16 sec)
+
+
+MariaDB [arm]> desc tabel_inventaris;
++----------------------+--------------+------+-----+---------+-------+
+| Field                | Type         | Null | Key | Default | Extra |
++----------------------+--------------+------+-----+---------+-------+
+| nomor_inventaris     | varchar(12)  | NO   | PRI | NULL    |       |
+| nama_inventaris      | varchar(50)  | NO   |     | NULL    |       |
+| deskripsi_inventaris | varchar(150) | NO   |     | NULL    |       |
+| status_inventaris    | varchar(10)  | NO   |     | NULL    |       |
++----------------------+--------------+------+-----+---------+-------+
+4 rows in set (0.10 sec)
+
+MariaDB [arm]> insert into tabel_inventaris values("INV010720181","Sprayer","Alat spray jinjing tenaga pompa manual","Ready");
+Query OK, 1 row affected (0.09 sec)
+
+MariaDB [arm]> desc tabel_pemilik;
++----------------+--------------+------+-----+---------+-------+
+| Field          | Type         | Null | Key | Default | Extra |
++----------------+--------------+------+-----+---------+-------+
+| kode_pemilik   | varchar(15)  | NO   | PRI | NULL    |       |
+| nama_pemilik   | varchar(60)  | NO   |     | NULL    |       |
+| kontak_pemilik | varchar(20)  | NO   |     | NULL    |       |
+| alamat_pemilik | varchar(150) | NO   |     | NULL    |       |
++----------------+--------------+------+-----+---------+-------+
+4 rows in set (0.07 sec)
+
+MariaDB [arm]> insert into tabel_pemilik values("OWN07012018667","Pak Anton","089625336667","Villa Puncak Tidar no 55");
+Query OK, 1 row affected (0.09 sec)
+
+
+MariaDB [arm]> desc tabel_survei;
++----------------+--------------+------+-----+---------+-------+
+| Field          | Type         | Null | Key | Default | Extra |
++----------------+--------------+------+-----+---------+-------+
+| nomor_survei   | varchar(12)  | NO   | PRI | NULL    |       |
+| lokasi_survei  | varchar(450) | NO   |     | NULL    |       |
+| tanggal_survei | datetime     | NO   |     | NULL    |       |
++----------------+--------------+------+-----+---------+-------+
+3 rows in set (0.09 sec)
+
+MariaDB [arm]> alter table tabel_survei modify tanggal_survei CURRENT TIME STAMP
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax
+to use near 'CURRENT TIME STAMP' at line 1
+MariaDB [arm]> alter table tabel_survei modify tanggal_survei default current_timestamp;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax
+to use near 'default current_timestamp' at line 1
+MariaDB [arm]> alter table tabel_survei modify tanggal_survei datetime default current_timestamp;
+Query OK, 0 rows affected (0.47 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+MariaDB [arm]> insert into tabel_survei values("SRV300620181","puncak tidar");
+ERROR 1136 (21S01): Column count doesn't match value count at row 1
+MariaDB [arm]> insert into tabel_survei(nomor_survei,lokasi_survei) values("SRV300620181","puncak tidar");
+Query OK, 1 row affected (0.08 sec)
+
+MariaDB [arm]> select * from tabel_survei;
++--------------+---------------+---------------------+
+| nomor_survei | lokasi_survei | tanggal_survei      |
++--------------+---------------+---------------------+
+| SRV300620181 | puncak tidar  | 2018-07-01 12:16:52 |
++--------------+---------------+---------------------+
+1 row in set (0.00 sec)
+
+MariaDB [arm]> alter table tabel_survei modify tanggal_survei datetime default current_timestamp not null;
+Query OK, 1 row affected (0.76 sec)
+Records: 1  Duplicates: 0  Warnings: 0
+
+MariaDB [arm]> desc tabel_survei;
++----------------+--------------+------+-----+-------------------+-------+
+| Field          | Type         | Null | Key | Default           | Extra |
++----------------+--------------+------+-----+-------------------+-------+
+| nomor_survei   | varchar(12)  | NO   | PRI | NULL              |       |
+| lokasi_survei  | varchar(450) | NO   |     | NULL              |       |
+| tanggal_survei | datetime     | NO   |     | CURRENT_TIMESTAMP |       |
++----------------+--------------+------+-----+-------------------+-------+
+3 rows in set (0.00 sec)
+
+
+MariaDB [arm]> insert into tabel_proyek(nomor_proyek,nama_proyek,alamat_proyek,besaran_proyek,lama_pekerjaan,nomor_survei) values("PRYK070120181
+","puncak tidar","villa puncak tidar nomor 55",1900000,5,"SRV010720181");
+
+MariaDB [arm]> select tabel_pemilik.nama_pemilik AS "Nama Pemilik" ,tabel_proyek.alamat_proyek as "Alamat Proyek" from tabel_laporan INNER JOIN
+tabel_pemilik on tabel_laporan.kode_pemilik=tabel_pemilik.kode_pemilik INNER JOIN tabel_proyek on tabel_laporan.nomor_proyek=tabel_proyek.nomor_
+proyek;
++--------------+-----------------------------+
+| Nama Pemilik | Alamat Proyek               |
++--------------+-----------------------------+
+| Pak Anton    | villa puncak tidar nomor 55 |
++--------------+-----------------------------+
+1 row in set (0.00 sec)
+
+
+
+MariaDB [arm]> select a.nomor_proyek,b.lokasi_survei,a.besaran_proyek,a.tanggal
+mulai,a.lama_pekerjaan,a.nomor_survei from tabel_proyek a,tabel_survei b where
+.nomor_survei = b.nomor_survei;

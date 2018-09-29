@@ -1,0 +1,182 @@
+MariaDB [arm]> insert into tabel_gudang values("PREMS","PREMISE 205SL",10,"Alphametrin");
+MariaDB [arm]> insert into tabel_gudang values("RIZOT","RIZOTIN 20SL",100,"Rizotin");
+MariaDB [arm]> insert into tabel_gudang values("RAMBO","RAMBO pembasmi gulma",90,"Rambo");
+MariaDB [arm]> insert into tabel_gudang values("CYPER","CYPER KILLER",230,"alpha sbp.");
+MariaDB [arm]> insert into tabel_gudang values("LNTRA","LENTRA 200SL",8000,"Alphametrin");
+MariaDB [arm]> insert into tabel_gudang values("MIXAG","MIXAGRIP MIGREN",10,"MIXA");
+MariaDB [arm]> insert into tabel_gudang values("OSKAD","OSKADON obat pusing",20,"OSKAA");
+MariaDB [arm]> insert into tabel_gudang values("ANTAN","ANTANGIN",100,"kurkuma");
+MariaDB [arm]> insert into tabel_gudang values("ANTNP","ANTANGIN PEGEL LINU",30,"kurkuma plus");
+MariaDB [arm]> insert into tabel_gudang values("LASRI","LASERIN 80ML",300,"daun mint");
+
+
+
+
+MariaDB [arm]> insert into tabel_inventaris values("INV010720181","Sprayer","ALat spray jinjing tenaga pompa manual","Ready");
+MariaDB [arm]> insert into tabel_inventaris values("INV040720183","palu","mljohir","Not Ready");
+MariaDB [arm]> insert into tabel_inventaris values("INV010120182","kompresor","kompresor air bertenaga tinggi","Ready");
+MariaDB [arm]> insert into tabel_inventaris values("INV010320184","kompresor jinjing","kompresor air bertenaga listrik","Ready");
+MariaDB [arm]> insert into tabel_inventaris values("INV100320181","tangga besi","tangga berbahan besi utuh","Ready");
+MariaDB [arm]> insert into tabel_inventaris values("INV110320181","tang cucut","tang berbentuk lancip","Ready");
+MariaDB [arm]> insert into tabel_inventaris values("INV130520183","obeng plus","obeng plus untuk listrik","Not Ready");
+MariaDB [arm]> insert into tabel_inventaris values("INV110520181","obeng minus","obeng minus untuk listrik","Not Ready");
+MariaDB [arm]> insert into tabel_inventaris values("INV290520189","selang kecil","selang untuk tekanan air tinggi","Ready");
+MariaDB [arm]> insert into tabel_inventaris values("INV290520189","selang karet","digunakan untuk mengisi air di tong","Ready");
+
+
+MariaDB [arm]> insert into tabel_karyawan values("EMPT8973","Pak Tain","Karangploso View","teknisi","085755674805");
+MariaDB [arm]> insert into tabel_karyawan values("EMPT8973","Mas Tofa","Griya Permata Alam blok O","operator","089723467823");
+MariaDB [arm]> insert into tabel_karyawan values("EMPJ8723","Pak Jimmy","Permata Regency 2","T.Listrik","087563478923");6
+MariaDB [arm]> insert into tabel_karyawan values("EMPK9876","Pak Kardi","Ngijo","Tukang","089762356783");
+MariaDB [arm]> insert into tabel_karyawan values("EMPS9876","Pak Seno","GPA","Tukang","085623429873");
+MariaDB [arm]> insert into tabel_karyawan values("EMPL9023","Pak Lan","Ngijo","Teknisi","089634239023");
+MariaDB [arm]> insert into tabel_karyawan values("EMPY2343","Pak Yo","Ngijo","Operator","089635672334");
+MariaDB [arm]> insert into tabel_karyawan values("EMPT5678","Mas Tomi","Ngijo","Operator","087823415678");
+MariaDB [arm]> insert into tabel_karyawan values("EMPT7788","Mas Agung","GPA","Operator","082103927788");
+MariaDB [arm]> insert into tabel_karyawan values("EMPD5232","Mas Dedik","GPA","Teknisi","085902345253");
+
+MariaDB [arm]> insert into tabel_pemilik values("OWN07012018876","Pak Enggar","089523341232","Permata Jingga");
+MariaDB [arm]> insert into tabel_pemilik values("OWN01042017234","Pak Adi","082176438912","Sigura-gura");
+MariaDB [arm]> insert into tabel_pemilik values("OWN10042018923","Pak Andri","082123242342","Araya Golf");
+MariaDB [arm]> insert into tabel_pemilik values("OWN10042018923","Pak John","083134230987","Patra Land");
+MariaDB [arm]> insert into tabel_pemilik values("OWN10102017921","Pak steve","082323424923","Permata Jingga");
+MariaDB [arm]> insert into tabel_pemilik values("OWN21072018123","Pak karno","089622534567","Surabaya");
+MariaDB [arm]> insert into tabel_pemilik values("OWN27032018762","Bu Indri","087823494576","Jakarta");
+MariaDB [arm]> insert into tabel_pemilik values("OWN11092018334","Bu ani","087723440983","Batam");
+MariaDB [arm]> insert into tabel_pemilik values("OWN10042018923","Pak Andri","082123242342","Villa Puncak Tidar no 55");
+MariaDB [arm]> insert into tabel_pemilik values("OWN09012018567","Pak Emil","089523458976","Araya");
+
+MariaDB [arm]> insert into tabel_survei(nomor_survei,deskripsi_kerusakan,lokasi_survei) values("SRV090820183","Rumah Type besar kerusakan ada di
+ gypsum dari bangunan","Araya");
+Query OK, 1 row affected (0.08 sec)
+
+MariaDB [arm]> insert into tabel_survei(nomor_survei,deskripsi_kerusakan,lokasi_survei) values("SRV08022017","Rumah Type besar memiliki lemari t
+anam sudah sebagian di serang rayap","Dwigga");
+Query OK, 1 row affected (0.07 sec)
+
+MariaDB [arm]> insert into tabel_survei(nomor_survei,deskripsi_kerusakan,lokasi_survei) values("SRV100220172","Rumah Type kecil memiliki lemari
+tanam sudah sebagian di serang rayap, perawatan hanya pada lemari","Dmasyur");
+Query OK, 1 row affected (0.09 sec)
+
+ERROR 1062 (23000): Duplicate entry 'SRV100220172' for key 'PRIMARY'
+MariaDB [arm]> insert into tabel_survei(nomor_survei,deskripsi_kerusakan,lokasi_survei) values("SRV300320181","Taman dan kursi taman sudah diser
+ang rayap!","jalan patimura no 10");
+Query OK, 1 row affected (0.07 sec)
+
+MariaDB [arm]> insert into tabel_survei(nomor_survei,deskripsi_kerusakan,lokasi_survei) values("SRV050720186","Rumah belum jadi, pekerjaan pra k
+onstruksi, luas rumah sedang","Patra land");
+Query OK, 1 row affected (0.09 sec)
+
+MariaDB [arm]> insert into tabel_survei(nomor_survei,deskripsi_kerusakan,lokasi_survei) values("SRV091020187","Kusen-kusen rumah sudah terserang
+ rumah ukuran besar dan banyak barang-barang antik mudah pecah","Araya golf");
+Query OK, 1 row affected (0.08 sec)
+
+MariaDB [arm]> insert into tabel_survei(nomor_survei,deskripsi_kerusakan,lokasi_survei) values("SRV250320189","Kusen diserang karena faktor bawa
+an dari tanaman yang dibawa dari luar bangunan","jalan teluk pacitan no 32");
+Query OK, 1 row affected (0.08 sec)
+
+MariaDB [arm]> insert into tabel_survei(nomor_survei,deskripsi_kerusakan,lokasi_survei) values("SRV130720177","Bangunan awal, cukup besar penger
+jaan butuh termyn karena kusen belum datang","Tandes Surabaya");
+Query OK, 1 row affected (0.07 sec)
+
+MariaDB [arm]> insert into tabel_survei(nomor_survei,deskripsi_kerusakan,lokasi_survei) values("SRV111220172","Bangunan Ruko, masih baru dipasan
+g lemari tempel (jadi potensi serangan) perawatan nantinya menyeluruh","Sigura-gura");
+Query OK, 1 row affected (0.07 sec)
+
+
+
+
+
+MariaDB [arm]> insert into tabel_proyek(nomor_proyek,besaran_proyek,lama_pekerjaan,nomor_survei) values("PRYK100720186",2000000,4,"SRV050720186"
+);
+Query OK, 1 row affected (0.12 sec)
+
+MariaDB [arm]> insert into tabel_proyek(nomor_proyek,besaran_proyek,lama_pekerjaan,nomor_survei) values("PRYK110220176",1500000,2,"SRV08022017")
+;
+Query OK, 1 row affected (0.09 sec)
+
+MariaDB [arm]> insert into tabel_proyek(nomor_proyek,besaran_proyek,lama_pekerjaan,nomor_survei) values("PRYK120820187",1235000,3,"SRV090820183"
+);
+Query OK, 1 row affected (0.07 sec)
+
+MariaDB [arm]> insert into tabel_proyek(nomor_proyek,besaran_proyek,lama_pekerjaan,nomor_survei) values("PRYK150920187",1250000,1,"SRV091020187"
+);
+Query OK, 1 row affected (0.06 sec)
+
+MariaDB [arm]> insert into tabel_proyek(nomor_proyek,besaran_proyek,lama_pekerjaan,nomor_survei) values("PRYK110920174",2500000,2,"SRV100220172"
+);
+Query OK, 1 row affected (0.06 sec)
+
+MariaDB [arm]> insert into tabel_proyek(nomor_proyek,besaran_proyek,lama_pekerjaan,nomor_survei) values("PRYK301120182",750000,1,"SRV111220172")
+;
+Query OK, 1 row affected (0.08 sec)
+
+MariaDB [arm]> insert into tabel_proyek(nomor_proyek,besaran_proyek,lama_pekerjaan,nomor_survei) values("PRYK211220181",7500000,1,"SRV130720177"
+);
+Query OK, 1 row affected (0.05 sec)
+
+MariaDB [arm]> insert into tabel_proyek(nomor_proyek,besaran_proyek,lama_pekerjaan,nomor_survei) values("PRYK211220181",1000000,2,"SRV250320189"
+);
+ERROR 1062 (23000): Duplicate entry 'PRYK211220181' for key 'PRIMARY'
+MariaDB [arm]> insert into tabel_proyek(nomor_proyek,besaran_proyek,lama_pekerjaan,nomor_survei) values("PRYK220120187",1000000,2,"SRV250320189"
+);
+Query OK, 1 row affected (0.07 sec)
+
+MariaDB [arm]> insert into tabel_proyek(nomor_proyek,besaran_proyek,lama_pekerjaan,nomor_survei) values("PRYK220320181",3000000,3,"SRV300320181"
+);
+Query OK, 1 row affected (0.06 sec)
+
+
+
+
+MariaDB [arm]> create view alamat as select a.lokasi_survei from tabel_proyek b,tabel_survei a where b.nomor_survei = a.nomor_survei;
+Query OK, 0 rows affected (0.33 sec)
+
+MariaDB [arm]> select * from alamat;
++---------------------------+
+| lokasi_survei             |
++---------------------------+
+| Puncak Tidar blok B no 55 |
+| Patra land                |
+| Dwigga                    |
+| Araya                     |
+| Araya golf                |
+| Dmasyur                   |
+| Sigura-gura               |
+| Tandes Surabaya           |
+| jalan teluk pacitan no 32 |
+| jalan patimura no 10      |
++---------------------------+
+10 rows in set (0.04 sec)
+
+
+
+MariaDB [arm]> create view testr as select b.nomor_proyek,a.lokasi_survei,a.nomor_survei from tabel_pro
+ = a.nomor_survei;
+Query OK, 0 rows affected (0.04 sec)
+
+
+MariaDB [arm]> select a.nomor_laporan,b.nomor_proyek,c.lokasi_survei from tabel_laporan a join tabel_proyek b on a.nomor_proyek=b.nomor_proyek j
+oin testr c on a.nomor_proyek = c.nomor_proyek;
+
+MariaDB [arm]> create view jointhree as select a.nomor_laporan,b.nomor_proyek,c.lokasi_survei from tabel_laporan a join tabel_proyek b on a.nomo
+r_proyek=b.nomor_proyek join testr c on a.nomor_proyek = c.nomor_proyek;
+Query OK, 0 rows affected (0.05 sec)
+
+
+MariaDB [arm]> select a.nomor_laporan,b.nomor_proyek,b.lokasi_survei,b.besaran_proyek,c.nama_pemilik,d.nama_karyawan,e.nama_inventaris,f.nama_ob
+at from tabel_laporan a join testr b on a.nomor_proyek = b.nomor_proyek join tabel_pemilik c on a.kode_pemilik = c.kode_pemilik join tabel_kary
+awan d on a.kode_karyawan=d.kode_karyawan join tabel_inventaris e on a.nomor_inventaris = e.nomor_inventaris join tabel_gudang f on a.kode_obat=
+f.kode_obat;
++--------------------------+---------------+---------------------------+----------------+--------------+---------------+-----------------+------
+--------+
+| nomor_laporan            | nomor_proyek  | lokasi_survei             | besaran_proyek | nama_pemilik | nama_karyawan | nama_inventaris | nama_
+obat    |
++--------------------------+---------------+---------------------------+----------------+--------------+---------------+-----------------+------
+--------+
+| REP01072018OWN01072018AG | PRYK070120181 | Puncak Tidar blok B no 55 |        1900000 | Pak Anton    | Pak Tain      | Sprayer         | LENTR
+A 200SL |
++--------------------------+---------------+---------------------------+----------------+--------------+---------------+-----------------+------
+--------+
+1 row in set (0.03 sec)
+

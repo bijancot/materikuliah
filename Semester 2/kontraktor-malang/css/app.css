@@ -1,0 +1,211 @@
+.menu-text{
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align:left !important;
+}
+
+.hero{
+    background-image: url("https://res.cloudinary.com/bijancot/image/upload/q_auto/v1526708944/construction-house_wvviuc.jpg");
+    text-align: center;
+    background-position: center top;
+    height:auto;
+}
+.button.success{
+    color:white;
+    margin:8px;
+    margin-top:10px
+}
+
+.button.alert{
+    color:white !important;
+    margin:8px;
+    margin-top:10px;
+}
+.wrap{
+
+    
+}
+
+.wrapp{
+    padding-top:140px;
+    padding-bottom:100px;
+    margin:0px !important;
+    color:white;    
+    background-color: rgba(0, 0, 0, 0.6);
+    height: auto;
+    background-position: right top;
+}
+
+.inside{
+    width:90%;
+    max-width: 700px;
+    margin: 0px auto;
+}
+.wrap2{
+    padding-top:20px;
+    width:90%;
+    max-width:1000px;
+    margin: 0px auto;
+    height: auto !important;
+    padding-bottom:20px;
+}
+
+.bor{
+    padding-top:60px !important;
+    /*border:1px solid blue;*/
+    padding:45px;
+    padding-bottom:20px !important;
+    text-align: center;
+}
+
+.main-head{
+    margin-top:40px;
+    font-size:2em;
+}
+
+.sub-tit{
+    margin-top:10px;
+    text-align:center;
+}
+
+.subsub{
+    font-size:0.9em;
+}
+
+.phar{
+    font-size: 1em;
+}
+
+.jud{
+    font-size:2.3em;
+}
+
+.wrap-bot{
+    width:90%;
+    max-width:1000px;
+    margin-left:20px;
+    padding-top:40px;
+    padding-bottom:40px;
+    text-align:center;
+    margin: 0px auto;
+}
+
+.about{
+    background-color: #878f99;
+    text-align:center;
+    
+}
+
+.bot-head{
+    font-size:2em;
+}
+
+.bot-sub{
+    font-size:0.9em;
+}
+
+.gallery{
+    padding-top:40px;
+    padding-bottom:30px;
+}
+.gal-head{
+    font-size:2em;
+}
+
+.footer{
+    color:white;
+    background-color: #6b5b95;
+    padding-top:20px;
+    padding-bottom:10px;
+   
+    text-align: left !important;
+}
+
+.wrap3{
+    width:90%;
+    max-width: 1100px;
+    margin:0px auto;
+}
+
+
+.credit{
+    font-size: 0.9em;
+    background-color: #a2b9bc;
+    padding-top:1px;
+    padding-bottom:1px;
+    color:black !important;
+}
+
+.sep{
+    border-left: 5px solid white !important;
+    padding-left:12px;
+    font-size:1em;
+}
+
+.fep{
+    font-size: 1em;
+}
+
+.button.alert.medium{
+    margin-top:8px !important;
+    margin:0px;
+}
+
+.button.success.medium{
+    margin-top:8px !important;
+    margin:0px;
+}
+
+.soc{
+    height: 40px;
+}
+
+a.link{
+    color:black !important;
+}
+
+.kolo{
+    height:auto !important;
+    padding-bottom:0px !important;
+}
+
+.thumb{
+    padding-top:10px;
+    margin-bottom:15px;
+}
+
+.ytk{
+    font-size: 0.95em;
+}
+
+.main{
+    height: auto !important;
+}
+
+.dec{
+    font-style: oblique;
+}
+
+.opa{
+    background-color: rgba(0, 0, 0, 0.6) !important;
+    color:white;
+    position:relative;
+    font-weight: bold !important;
+}
+
+ul{
+    background-color: rgba(0, 0, 0, 0) !important;
+    color:white;
+    position:relative;
+    font-weight: bold !important;
+}
+
+.wrapx{
+    padding-top:40px;
+    padding-bottom:100px;
+    margin:0px !important;
+    color:white;    
+    background-color: rgba(0, 0, 0, 0.6);
+    height: auto;
+    background-position: right top;
+}

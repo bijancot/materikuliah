@@ -1,0 +1,27 @@
+//data berhasil masuk
+
+
+MariaDB [basdat_pakbagus]> insert into departement values("D1","Pabrik A","S1")
+    -> ;
+Query OK, 1 row affected (0.037 sec)
+
+MariaDB [basdat_pakbagus]> insert into departement values("D2","Pabrik B","S4");
+Query OK, 1 row affected (0.065 sec)
+
+MariaDB [basdat_pakbagus]> insert into departement values("D3","Pabrik C","S8");
+Query OK, 1 row affected (0.086 sec)
+
+MariaDB [basdat_pakbagus]> 
+
+
+MariaDB [basdat_pakbagus]> select * from departement;
++---------+----------+--------+
+| DNumber | Dname    | MgrSSN |
++---------+----------+--------+
+| D1      | Pabrik A | S1     |
+| D2      | Pabrik B | S4     |
+| D3      | Pabrik C | S8     |
++---------+----------+--------+
+3 rows in set (0.001 sec)
+
+MariaDB [basdat_pakbagus]>

@@ -1,0 +1,18 @@
+a <- {3,5,1,7,2}
+a <- b
+c,x <- 0
+
+for x <- 0; x <a.length;x++
+    do for y <- 0 x+1;y <b.length;y++
+        do if a[x] < b[y]
+            do c <- a[x]
+               a[x] <- b[y]
+               a[x] <- c
+            end
+        end
+    end
+
+for j <- 0;j < a.length;j++
+    do print a[j]
+end
+

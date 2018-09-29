@@ -1,0 +1,52 @@
+// gagal tambah data karena salah constraint jadi hapus semua constraint
+
+
+MariaDB [basdat_pakbagus]> show create table departement;
++-------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Table       | Create Table                                                                                                                                                                                                                                                                                                       |
++-------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| departement | CREATE TABLE `departement` (
+  `DNumber` varchar(3) NOT NULL,
+  `Dname` varchar(15) NOT NULL,
+  `MgrSSN` varchar(3) NOT NULL,
+  PRIMARY KEY (`DNumber`),
+  KEY `MgrSSN` (`MgrSSN`),
+  CONSTRAINT `departement_ibfk_1` FOREIGN KEY (`MgrSSN`) REFERENCES `employee` (`SSN`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 |
++-------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+1 row in set (0.000 sec)
+
+MariaDB [basdat_pakbagus]> alter table departement drop constraint departement_ibfk_1
+    -> ;
+ERROR 1091 (42000): Can't DROP CONSTRAINT `departement_ibfk_1`; check that it exists
+MariaDB [basdat_pakbagus]> alter table departement drop foreign key departement_ibfk_1
+    -> ;
+Query OK, 0 rows affected (0.042 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+MariaDB [basdat_pakbagus]> show create table employee;
++----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Table    | Create Table                                                                                                                                                                                                                                                                                                                                                      |
++----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| employee | CREATE TABLE `employee` (
+  `SSN` varchar(3) NOT NULL,
+  `Ename` varchar(3) NOT NULL,
+  `Salary` int(11) NOT NULL,
+  `Dno` varchar(2) NOT NULL,
+  `SuperSSN` varchar(2) DEFAULT NULL,
+  PRIMARY KEY (`SSN`),
+  KEY `Dno` (`Dno`),
+  CONSTRAINT `employee_ibfk_1` FOREIGN KEY (`Dno`) REFERENCES `departement` (`DNumber`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 |
++----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+1 row in set (0.000 sec)
+
+MariaDB [basdat_pakbagus]> alter table employee employee rdrop foreign key employee_ibfk_1;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'rdrop foreign key employee_ibfk_1' at line 1
+MariaDB [basdat_pakbagus]> alter table employee employee drop foreign key employee_ibfk_1;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'drop foreign key employee_ibfk_1' at line 1
+MariaDB [basdat_pakbagus]> alter table employee drop foreign key employee_ibfk_1;
+Query OK, 0 rows affected (0.062 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+MariaDB [basdat_pakbagus]>

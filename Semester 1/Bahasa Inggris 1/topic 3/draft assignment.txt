@@ -1,0 +1,42 @@
+1. AI (artificial intelegence)
+2.	a decision trees
+	b neural network
+	c clustering
+3. the term is that after repeatly analyze the data, data must emerging and compare to these factor and software can look to the other patern that matching with patern taht found by these neural network data.
+
+4. cluster is used when we have a data that have a lot data and based on similar features, range or same variable limits. And the data is not labelled and it wort to be analyzed with data mining technique
+
+5. almost of them, like your PC storage, your cloud storage, or maybe you could buy a dedicated data center to store data? it's possible but you must aware of amount of data that will be stored and your storage capacity
+
+6. analyst can do a cross check and make sure there is no error but it's not analyzing the data from begining but just the result and make the data more trusted and can make some adavantage to it's company or it's organization
+
+7. the text that used as reference is taken from 'Data Mining For Golden Opportunities' january 2000, from that years the data science has been improved and offer some different adavantages or method, Data Mining now mostly used to be more big system that makes it's self ecosystem it's called big data whre data mining is also take a part of this ecosystem, actually Big data is a system that not just do a data mining and analyze it but also do a faster, Big and variety job, it's currently what a companies need. If you ask what data mining currently ways that used is for analyzing a lot of log data from a companies, search of buyyer habbit on a advertising program or to support a Big Data system and many more (now it is hot topic)
+
+
+I -> D
+II -> C
+III -> A
+IV -> B
+
+
+false
+true
+true 
+false
+false
+
+warehouse 
+mining
+cleansed
+irelevant/unneeded/unuseable
+pattern
+artificial intelegent
+analyst
+result/report
+mining
+useless
+decision
+taking
+
+parel do the assigment at campus yesterday
+the assignment was doing by parel 

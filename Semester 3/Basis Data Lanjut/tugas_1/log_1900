@@ -1,0 +1,85 @@
+root@budosen-pc:/mnt/b2c7efbf-ef52-437d-8ca7-e46ea581cbba/backup# mysql -u root -p                                                                                                              
+Enter password:                                                                                                                                                                                 
+Welcome to the MariaDB monitor.  Commands end with ; or \g.                                                                                                                                     
+Your MariaDB connection id is 55                                                                                                                                                                
+Server version: 10.3.9-MariaDB-1:10.3.9+maria~bionic mariadb.org binary distribution                                                                                                            
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> use basdat_pakbagus;
+Database changed
+MariaDB [basdat_pakbagus]> show tables;
+Empty set (0.000 sec)
+
+MariaDB [basdat_pakbagus]> create table departement(
+    -> DNumber varchar(3) not null,
+    -> Dname varchar(15) not null,
+    -> MgrSSN varchar(3) not null,
+    -> primary key (Dnumber));
+Query OK, 0 rows affected (0.189 sec)
+
+MariaDB [basdat_pakbagus]> desc departement;
++---------+-------------+------+-----+---------+-------+
+| Field   | Type        | Null | Key | Default | Extra |
++---------+-------------+------+-----+---------+-------+
+| DNumber | varchar(3)  | NO   | PRI | NULL    |       |
+| Dname   | varchar(15) | NO   |     | NULL    |       |
+| MgrSSN  | varchar(3)  | NO   |     | NULL    |       |
++---------+-------------+------+-----+---------+-------+
+3 rows in set (0.002 sec)
+
+MariaDB [basdat_pakbagus]> create table employee(
+    -> SSN varchar(3) not null,
+    -> Ename varchar(3) not null,
+    -> Salary int not null,
+    -> Dno varchar(2) not null,
+    -> SuperSSN varchar(2),
+    -> primary key (SSN));
+Query OK, 0 rows affected (0.215 sec)
+
+MariaDB [basdat_pakbagus]> show tables;
++---------------------------+
+| Tables_in_basdat_pakbagus |
++---------------------------+
+| departement               |
+| employee                  |
++---------------------------+
+2 rows in set (0.000 sec)
+
+MariaDB [basdat_pakbagus]> alter table departement add foreign key (Dno) references departement.Dnumber;
+ERROR 1072 (42000): Key column 'Dno' doesn't exist in table
+MariaDB [basdat_pakbagus]> alter table employee add foreign key (Dno) references departement.Dnumber;
+ERROR 1005 (HY000): Can't create table `basdat_pakbagus`.`#sql-484e_37` (errno: 150 "Foreign key constraint is incorrectly formed")
+MariaDB [basdat_pakbagus]> alter table employee add foreign key (Dno) references departement(Dnumber);
+Query OK, 0 rows affected (0.940 sec)              
+Records: 0  Duplicates: 0  Warnings: 0
+
+MariaDB [basdat_pakbagus]> alter table departement add foreign key (MgrSSN) references employee(SSN);
+Query OK, 0 rows affected (0.777 sec)              
+Records: 0  Duplicates: 0  Warnings: 0
+
+MariaDB [basdat_pakbagus]> desc departement;
++---------+-------------+------+-----+---------+-------+
+| Field   | Type        | Null | Key | Default | Extra |
++---------+-------------+------+-----+---------+-------+
+| DNumber | varchar(3)  | NO   | PRI | NULL    |       |
+| Dname   | varchar(15) | NO   |     | NULL    |       |
+| MgrSSN  | varchar(3)  | NO   | MUL | NULL    |       |
++---------+-------------+------+-----+---------+-------+
+3 rows in set (0.002 sec)
+
+MariaDB [basdat_pakbagus]> desc employee;
++----------+------------+------+-----+---------+-------+
+| Field    | Type       | Null | Key | Default | Extra |
++----------+------------+------+-----+---------+-------+
+| SSN      | varchar(3) | NO   | PRI | NULL    |       |
+| Ename    | varchar(3) | NO   |     | NULL    |       |
+| Salary   | int(11)    | NO   |     | NULL    |       |
+| Dno      | varchar(2) | NO   | MUL | NULL    |       |
+| SuperSSN | varchar(2) | YES  |     | NULL    |       |
++----------+------------+------+-----+---------+-------+
+5 rows in set (0.002 sec)
+
+MariaDB [basdat_pakbagus]> 

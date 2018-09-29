@@ -1,0 +1,2 @@
+update DETAIL_PEMBELIAN set JUMLAH_BARANG = 19 where ID_DETL_PEMB = 'DTLBL00001';
+select * from BARANG

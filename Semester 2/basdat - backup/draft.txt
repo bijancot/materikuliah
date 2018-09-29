@@ -1,0 +1,16 @@
+apache
+database
+HTML5
+MySQL
+normalisasi database
+	1NF
+	2NF
+	3NF
+php
+PHPMyadmin
+xampp
+ERD
+CDM
+RDBMS
+
+

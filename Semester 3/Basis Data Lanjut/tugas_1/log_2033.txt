@@ -1,0 +1,179 @@
+MariaDB [basdat_pakbagus]> insert into employee values ("S1","Bambang",15000,"D1","");
+ERROR 1406 (22001): Data too long for column 'Ename' at row 1
+MariaDB [basdat_pakbagus]> alter table employee column Ename varchar (15);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'column Ename varchar (15)' at line 1
+MariaDB [basdat_pakbagus]> alter table employee.Ename varchar (15);        
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'varchar (15)' at line 1
+MariaDB [basdat_pakbagus]> alter table employee modify Ename varchar (15); 
+Query OK, 0 rows affected (0.887 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+MariaDB [basdat_pakbagus]> insert into employee values ("S1","Bambang",15000,"D1","");
+Query OK, 1 row affected (0.036 sec)
+
+MariaDB [basdat_pakbagus]> insert into employee values ("S2","Rudi",6000,"D1","S1");  
+Query OK, 1 row affected (0.067 sec)
+
+MariaDB [basdat_pakbagus]> select * from employee;
++-----+---------+--------+-----+----------+
+| SSN | Ename   | Salary | Dno | SuperSSN |
++-----+---------+--------+-----+----------+
+| S1  | Bambang |  15000 | D1  |          |
+| S2  | Rudi    |   6000 | D1  | S1       |
++-----+---------+--------+-----+----------+
+2 rows in set (0.189 sec)
+
+MariaDB [basdat_pakbagus]> insert into employee values ("S3","Santi",4000,"D1","S2"); 
+Query OK, 1 row affected (0.222 sec)
+
+MariaDB [basdat_pakbagus]> insert into employee values ("S4","Rina",10000,"D2","S1");
+Query OK, 1 row affected (0.059 sec)
+
+MariaDB [basdat_pakbagus]> desc departement;
++---------+-------------+------+-----+---------+-------+
+| Field   | Type        | Null | Key | Default | Extra |
++---------+-------------+------+-----+---------+-------+
+| DNumber | varchar(3)  | NO   | PRI | NULL    |       |
+| Dname   | varchar(15) | NO   |     | NULL    |       |
+| MgrSSN  | varchar(3)  | NO   | MUL | NULL    |       |
++---------+-------------+------+-----+---------+-------+
+3 rows in set (0.023 sec)
+
+MariaDB [basdat_pakbagus]> show create departement;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'departement' at line 1
+MariaDB [basdat_pakbagus]> show create table departement;
++-------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Table       | Create Table                                                                                                                                                                                                               |
++-------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| departement | CREATE TABLE `departement` (
+  `DNumber` varchar(3) NOT NULL,
+  `Dname` varchar(15) NOT NULL,
+  `MgrSSN` varchar(3) NOT NULL,
+  PRIMARY KEY (`DNumber`),
+  KEY `MgrSSN` (`MgrSSN`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 |
++-------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+1 row in set (0.000 sec)
+
+MariaDB [basdat_pakbagus]> alter table employee add foreign key Dno references departement(DNumber);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'references departement(DNumber)' at line 1
+MariaDB [basdat_pakbagus]> alter table employee add constraint Dno references departement(DNumber);           
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'references departement(DNumber)' at line 1
+MariaDB [basdat_pakbagus]> alter table employee add constraint 'something' foreign key Dno references departement(DNumber);    
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''something' foreign key Dno references departement(DNumber)' at line 1
+MariaDB [basdat_pakbagus]> alter table employee add constraint something foreign key Dno references departement(DNumber);  
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'references departement(DNumber)' at line 1
+MariaDB [basdat_pakbagus]> alter table employee add constraint something foreign key (Dno) references departement(DNumber);
+Query OK, 4 rows affected (0.860 sec)              
+Records: 4  Duplicates: 0  Warnings: 0
+
+MariaDB [basdat_pakbagus]> insert into employee values ("S5","Eko",6000,"D2","S4");                                           
+Query OK, 1 row affected (0.075 sec)
+
+MariaDB [basdat_pakbagus]> insert into employee values ("S6","Doni",4000,"D2","S4");
+Query OK, 1 row affected (0.095 sec)
+
+MariaDB [basdat_pakbagus]> insert into employee values ("S7","Lisa",4000,"D2","S5");
+Query OK, 1 row affected (0.043 sec)
+
+MariaDB [basdat_pakbagus]> insert into employee values ("S8","Abdi",10000,"D3","S1");
+Query OK, 1 row affected (0.045 sec)
+
+MariaDB [basdat_pakbagus]> insert into employee values ("S9","Bella",4000,"D3","S8"); 
+Query OK, 1 row affected (0.037 sec)
+
+MariaDB [basdat_pakbagus]> insert into employee values ("S10","Andi",4000,"D3","S8"); 
+Query OK, 1 row affected (0.068 sec)
+
+MariaDB [basdat_pakbagus]> select * from employee;
++-----+---------+--------+-----+----------+
+| SSN | Ename   | Salary | Dno | SuperSSN |
++-----+---------+--------+-----+----------+
+| S1  | Bambang |  15000 | D1  |          |
+| S10 | Andi    |   4000 | D3  | S8       |
+| S2  | Rudi    |   6000 | D1  | S1       |
+| S3  | Santi   |   4000 | D1  | S2       |
+| S4  | Rina    |  10000 | D2  | S1       |
+| S5  | Eko     |   6000 | D2  | S4       |
+| S6  | Doni    |   4000 | D2  | S4       |
+| S7  | Lisa    |   4000 | D2  | S5       |
+| S8  | Abdi    |  10000 | D3  | S1       |
+| S9  | Bella   |   4000 | D3  | S8       |
++-----+---------+--------+-----+----------+
+10 rows in set (0.001 sec)
+
+MariaDB [basdat_pakbagus]> select * from employee asc order by( SSN);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'asc order by( SSN)' at line 1
+MariaDB [basdat_pakbagus]> select * from employee asc order by(SSN); 
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'asc order by(SSN)' at line 1
+MariaDB [basdat_pakbagus]> select * from employee asc order by SSN; 
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'asc order by SSN' at line 1
+MariaDB [basdat_pakbagus]> select * from employee order by SSN;    
++-----+---------+--------+-----+----------+
+| SSN | Ename   | Salary | Dno | SuperSSN |
++-----+---------+--------+-----+----------+
+| S1  | Bambang |  15000 | D1  |          |
+| S10 | Andi    |   4000 | D3  | S8       |
+| S2  | Rudi    |   6000 | D1  | S1       |
+| S3  | Santi   |   4000 | D1  | S2       |
+| S4  | Rina    |  10000 | D2  | S1       |
+| S5  | Eko     |   6000 | D2  | S4       |
+| S6  | Doni    |   4000 | D2  | S4       |
+| S7  | Lisa    |   4000 | D2  | S5       |
+| S8  | Abdi    |  10000 | D3  | S1       |
+| S9  | Bella   |   4000 | D3  | S8       |
++-----+---------+--------+-----+----------+
+10 rows in set (0.001 sec)
+
+MariaDB [basdat_pakbagus]> select * from employee order by SSN asc;
++-----+---------+--------+-----+----------+
+| SSN | Ename   | Salary | Dno | SuperSSN |
++-----+---------+--------+-----+----------+
+| S1  | Bambang |  15000 | D1  |          |
+| S10 | Andi    |   4000 | D3  | S8       |
+| S2  | Rudi    |   6000 | D1  | S1       |
+| S3  | Santi   |   4000 | D1  | S2       |
+| S4  | Rina    |  10000 | D2  | S1       |
+| S5  | Eko     |   6000 | D2  | S4       |
+| S6  | Doni    |   4000 | D2  | S4       |
+| S7  | Lisa    |   4000 | D2  | S5       |
+| S8  | Abdi    |  10000 | D3  | S1       |
+| S9  | Bella   |   4000 | D3  | S8       |
++-----+---------+--------+-----+----------+
+10 rows in set (0.001 sec)
+
+MariaDB [basdat_pakbagus]> select * from employee order by SSN desc;
++-----+---------+--------+-----+----------+
+| SSN | Ename   | Salary | Dno | SuperSSN |
++-----+---------+--------+-----+----------+
+| S9  | Bella   |   4000 | D3  | S8       |
+| S8  | Abdi    |  10000 | D3  | S1       |
+| S7  | Lisa    |   4000 | D2  | S5       |
+| S6  | Doni    |   4000 | D2  | S4       |
+| S5  | Eko     |   6000 | D2  | S4       |
+| S4  | Rina    |  10000 | D2  | S1       |
+| S3  | Santi   |   4000 | D1  | S2       |
+| S2  | Rudi    |   6000 | D1  | S1       |
+| S10 | Andi    |   4000 | D3  | S8       |
+| S1  | Bambang |  15000 | D1  |          |
++-----+---------+--------+-----+----------+
+10 rows in set (0.001 sec)
+
+MariaDB [basdat_pakbagus]> select * from employee order by SSN;
++-----+---------+--------+-----+----------+
+| SSN | Ename   | Salary | Dno | SuperSSN |
++-----+---------+--------+-----+----------+
+| S1  | Bambang |  15000 | D1  |          |
+| S10 | Andi    |   4000 | D3  | S8       |
+| S2  | Rudi    |   6000 | D1  | S1       |
+| S3  | Santi   |   4000 | D1  | S2       |
+| S4  | Rina    |  10000 | D2  | S1       |
+| S5  | Eko     |   6000 | D2  | S4       |
+| S6  | Doni    |   4000 | D2  | S4       |
+| S7  | Lisa    |   4000 | D2  | S5       |
+| S8  | Abdi    |  10000 | D3  | S1       |
+| S9  | Bella   |   4000 | D3  | S8       |
++-----+---------+--------+-----+----------+
+10 rows in set (0.000 sec)
+
+MariaDB [basdat_pakbagus]> 

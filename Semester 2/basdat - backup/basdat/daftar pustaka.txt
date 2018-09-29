@@ -1,0 +1,16 @@
+daftar pustaka
+
+Anonim.2004.About the Apache HTTP Server Project.https://httpd.apache.org/ABOUT_APACHE.html. Diakses pada 11 Juni 2018
+Hindro.2012.Pengertian Database.https://www.termasmedia.com/lainnya/software/69-pengertian-database.html. Diakses pada 11 Juni 2018
+Fahrudin, Irfal.2015.Normalisasi Database 1NF, 2NF, & 3NF.https://rifalfahrudin.wordpress.com/2015/09/27/normalisasi-Database-1nf-2nf-3nf/. Diakses pada 6 Juni 2018
+Chrisara, Bagas.2018.PHP.https://id.wikipedia.org/wiki/PHP. Diakses pada 11 Juni 2018
+Risna.2013.Mengenal phpMyAdmin Dan Kegunaannya.https://www.termasmedia.com/database/phpmyadmin/131-mengenal-phpmyadmin-dan-kegunaannya.html. Diakses pada 10 Juni 2018
+Diwan, Kang.2015.Pengertian Field, Record, Table, File, Data, Basis Data Lengkap, Grafik, dan Bagan.https://bundaliainsidi.blogspot.com/2015/10/pengertian-field-record-table-file-data.html. Diakses pada 11 Juni 2018
+Ratidiaapriyanti.2015.Mengenal Apa Itu XAMPP ?.https://ratindiaapriyanti.wordpress.com/2015/12/07/mengenal-apa-itu-xampp/. Diakses pada 11 Juni 2018
+Vandenberg, John.2018.Diagram hubungan entitas.https://id.wikipedia.org/wiki/Diagram_hubungan_entitas. Diakses pada 11 Juni 2018
+Christensen, Emily.2017.ER Diagram Symbols and Notation.https://www.lucidchart.com/blog/er-diagram-symbols-and-notation. Diakses pada 11 Juni 2018
+Andiyono.2010.Apa itu CDM dan PDM?.https://agusandi.wordpress.com/2010/03/15/apa-itu-cdm-fan-pdm/. Diakses pada 11 Juni 2018
+Tomalak.2010.SQL: How to join a view with a table?.https://stackoverflow.com/questions/2600597/sql-how-to-join-a-view-with-a-table. Diakses pada 5 Juli 2018
+Magicial, Code.2012.MySQL Multiple Joins in one query?.https://stackoverflow.com/questions/8974328/mysql-multiple-joins-in-one-query. Diakses pada 5 Juli 2018
+Pamela.2015.Combining multiple joins.https://www.khanacademy.org/computing/computer-programming/sql/relational-queries-in-sql/p/combining-multiple-joins. Diakses pada 5 Juli 2018
+Jcorum.2016.hSQL - how to join multiple (3+) tables in a statement.https://teamtreehouse.com/community/sql-how-to-join-multiple-3-tables-in-a-statement. Diakses pada 5 Juli 2018

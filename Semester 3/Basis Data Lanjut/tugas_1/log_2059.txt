@@ -1,0 +1,80 @@
+MariaDB [basdat_pakbagus]> select Ename from employee where Dno="D1";
++---------+
+| Ename   |
++---------+
+| Bambang |
+| Rudi    |
+| Santi   |
++---------+
+3 rows in set (0.054 sec)
+
+MariaDB [basdat_pakbagus]> select sum(Salary) from employee where Dno="D2"
+    -> ;
++-------------+
+| sum(Salary) |
++-------------+
+|       24000 |
++-------------+
+1 row in set (0.014 sec)
+
+MariaDB [basdat_pakbagus]> select ename from employee where SuperSSN="S1";
++-------+
+| ename |
++-------+
+| Rudi  |
+| Rina  |
+| Abdi  |
++-------+
+3 rows in set (0.000 sec)
+
+MariaDB [basdat_pakbagus]> select sum(Ename) from employee group by Dno;
++------------+
+| sum(Ename) |
++------------+
+|          0 |
+|          0 |
+|          0 |
++------------+
+3 rows in set, 10 warnings (0.032 sec)
+
+MariaDB [basdat_pakbagus]> select count(Ename) from employee group by Dno;
++--------------+
+| count(Ename) |
++--------------+
+|            3 |
+|            4 |
+|            3 |
++--------------+
+3 rows in set (0.000 sec)
+
+MariaDB [basdat_pakbagus]> select Dno count(Ename) from employee group by Dno;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'count(Ename) from employee group by Dno' at line 1
+MariaDB [basdat_pakbagus]> select Dno, count(Ename) from employee group by Dno;
++-----+--------------+
+| Dno | count(Ename) |
++-----+--------------+
+| D1  |            3 |
+| D2  |            4 |
+| D3  |            3 |
++-----+--------------+
+3 rows in set (0.001 sec)
+
+MariaDB [basdat_pakbagus]> select a.Dname, b.Dno, count(b.Ename) from departement a join employee b on a.DNumber = b.Dno;
++----------+-----+----------------+
+| Dname    | Dno | count(b.Ename) |
++----------+-----+----------------+
+| Pabrik A | D1  |             10 |
++----------+-----+----------------+
+1 row in set (0.013 sec)
+
+MariaDB [basdat_pakbagus]> select a.Dname, b.Dno, count(b.Ename) from departement a join employee b on a.DNumber = b.Dno group by Dno;
++----------+-----+----------------+
+| Dname    | Dno | count(b.Ename) |
++----------+-----+----------------+
+| Pabrik A | D1  |              3 |
+| Pabrik B | D2  |              4 |
+| Pabrik C | D3  |              3 |
++----------+-----+----------------+
+3 rows in set (0.014 sec)
+
+MariaDB [basdat_pakbagus]> 
