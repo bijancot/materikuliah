@@ -11,3 +11,5 @@ docker run -p 3306:3306 --name bijan -v /mnt/b2c7efbf-ef52-437d-8ca7-e46ea581cbb
 new update
 
 docker run -p 3306:3306 --name bijan -v /mnt/b2c7efbf-ef52-437d-8ca7-e46ea581cbba/Kuliah/mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=bijan -d wongko/mysql:0.4
+
+docker run -p 3306:3306 --name bijan -v /mnt/b2c7efbf-ef52-437d-8ca7-e46ea581cbba/Kuliah/mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=bijan -d wongko/mysql:0.4
