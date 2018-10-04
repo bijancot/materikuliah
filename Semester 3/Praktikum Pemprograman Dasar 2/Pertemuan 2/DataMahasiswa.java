@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.ArrayList;
 public class DataMahasiswa{
 
     public static void main(String[] args){

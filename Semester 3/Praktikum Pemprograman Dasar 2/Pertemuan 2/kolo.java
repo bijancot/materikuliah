@@ -11,7 +11,6 @@ public class kolo{
         kolo.add("Semester");
         data.put("MK1",kolo);
 
-
         System.out.println(data.get("MK1"));
     }
 }
