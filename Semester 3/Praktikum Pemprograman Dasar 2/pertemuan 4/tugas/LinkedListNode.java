@@ -3,11 +3,10 @@ public class LinkedListNode {
     LinkedListNode prev;
     String data;
     
-    /* Constructor
-    * set this.data into new_data
+    /*
+     * Constructor  set this.data into new_data
     * set this.prev into null
-    * set this.next into null
-    */
+    * set this.next into */
     LinkedListNode(String new_data) {
         this.data = new_data;
         this.prev = null;
@@ -15,8 +14,7 @@ public class LinkedListNode {
     }
 
     /* set this.prev into other
-    * if other is not null, set other.next into this
-    */
+    * if other is not null, set    */
     void set_prev(LinkedListNode other) {
             this.prev = other;
         if (other != null) {

@@ -16,6 +16,7 @@ public class LinkedList {
         LinkedListNode current = this.head;
         int i = 1;
         while (current != null) {
+
             System.out.println(i+". "+current.data);
             current = current.next;
             i = i+1;
