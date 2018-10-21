@@ -44,8 +44,11 @@ public class tugaskuh {
             } else if (masuk.equals("3")) {
                 x = 0;
             } else {
+                System.out.println("\n\n!!!!!---ERROR---!!!!!");
                 System.out.println("inputan anda : " + masuk);
                 System.out.println("ERROR : undefined input code *001*");
+                System.out.println("!!!!!---ERROR---!!!!!");
+                x=0;
             }
         } while (x != 0);
         System.out.println("Anda Telah keluar dari sistem, Terimakasih!!");
