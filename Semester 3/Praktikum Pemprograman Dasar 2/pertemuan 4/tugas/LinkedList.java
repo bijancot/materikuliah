@@ -14,9 +14,11 @@ public class LinkedList {
      */
     void print() {
         LinkedListNode current = this.head;
+        int i = 1;
         while (current != null) {
-            System.out.print(current.data);
+            System.out.println(i+". "+current.data);
             current = current.next;
+            i = i+1;
         }
         if(this.head == null){
             System.out.println("kosong");
