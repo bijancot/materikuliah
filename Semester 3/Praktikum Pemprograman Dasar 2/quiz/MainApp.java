@@ -57,9 +57,12 @@ public class MainApp{
         System.out.println("note : jika harga yang anda masukkan memiliki selisih tidak lebih dari 3000\n\n");
         System.out.println("Apakah ingin main lagi? (Y/T)");
         kw = t.next();
-        if(!kw.equals("Y")||!kw.equals("T")){
+        if(!kw.equals("Y")&&!kw.equals("T")){
             System.out.println("System Error 128 : input miss match");
+            break;
         }
-        }while(kw.equals("Y"));
+        }while(!kw.equals("T"));   
+        System.out.println("Terimakasih");
     }
+   
 }

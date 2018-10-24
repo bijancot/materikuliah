@@ -7,10 +7,7 @@ public class addQ{
          x = HashData.random();
          ArrayList<String> g = new ArrayList<String>();
          for(int y =0; y<x.size();y++){
-            //t.push(new LinkedListNode(HashData.proses().get(x.get(y).nama)));
-            //System.out.println();
             g.add(x.get(y).toString());
-            //System.out.println(g.get(y));
          }
          return g;
     }
@@ -21,10 +18,4 @@ public class addQ{
            System.out.println(HashData.proses().get(p.get(o).toString()).get(0).nama+"\t"+HashData.proses().get(p.get(o).toString()).get(0).harga);
         }
     }
-    //public static void main(String args[]){
-     //   ArrayList q = HashData.random();
-     //   System.out.println(q);
-     //   System.out.println(q.get(0));
-       
-   // }
 }
