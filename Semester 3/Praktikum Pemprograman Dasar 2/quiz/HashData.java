@@ -69,6 +69,6 @@ public class HashData{
    //     for(int u = 0; u<HashData.random().size();u++){
     //        String q = HashData.random().get(u);
       //      System.out.println(HashData.proses().get(q).get(0).nama +" \t"+HashData.proses().get(q).get(0).harga);
-       // }
+       //}
     //}
 }
