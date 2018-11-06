@@ -1,0 +1,14 @@
+EXT4, adalah jenis partisi yang biasa digunakan untuk partisi logical yang ada pada sebuah sistem operasi yang biasanya baru diinstall. EXT4 adalah versi terbaru dari jenis partisi EXT. Partisi ini lebih cepat dan lebih handal dibandingkan dengan partisi pendahulunya.
+
+Swap, sementara SWAP adalah jenis partisi yang berfungsi sebagai virtual memory pada sebuah sistem operasi Linux. partisi ini bekerja ketika beban pada memory RAM komputer telalu berat antran proses dilarikan menuju penyimpanan memory sekunder seperti HDD atau SSD untuk kemudian diproses ke RAM. proses ini sedikit lebih lambat tergantung pada kecepatan akses dari HDD atau SSD yang dimiliki.
+
+
+kembali pada materi yang ada pada bab 3 input&output, pesan error muncul karena pada perintah yang kita gunakan untuk soal tersebut saat pembelokan menggunakan deciptor 2, deciptor yang gunanya untuk menerima output berupa error. pembelokan sendiri maksudnya adalah proses membelokkan sebuah outpu entah itu sebuah pesan error ataupunt idak ke dalam sebuah file, hal ini tergantung pada menggunakan deciptor atau tidak, jika menggunakan deciptor maka output akan menyesuaikan dengan deciptor yang digunakan. Jika tidak menggunakan deciptor makan outputnya akan tidak akan terpengaruh apakah itu pesan error atau tidak.
+
+pada soal ini kita diminta untuk menulis sebuah file dengan perintah nano yang sudha lebih mendekati dengan text editor modern lainnya. Jadi penggunaan nano jadi lebih mudah karena dinilai lebih sempurna daripada vi maupun vim dan lebih cocok untuk pengguna awam. Namun masih banyak pengguna OS linux server yang lebih suka menggunakan vi atau vim untuk text editor. untuk menyalin sebuah file dari satu directory ke directory lainnya kita bisa dengan mudah menggunakan perintah cp <nama-file(bisa dalam sebuah directory tertentu)> <nama-directory-tujuan> dengan begitu file yang ada pada sebuah directory tertentu bisa kita salin ke directory lain yang kita masukkan debagai directory tujuan dari penyalinan tersebut.
+
+
+
+tar -cvf example.tar latihan*
+
+cat dasda | grep ""
