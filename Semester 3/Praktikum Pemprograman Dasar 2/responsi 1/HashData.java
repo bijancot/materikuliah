@@ -1,5 +1,7 @@
 //@author bijancot 
-//github = https://github.com/bijancot
+//github = https://github.com/bijancot/materikuliah/tree/master/Semester%203/Praktikum%20Pemprograman%20Dasar%202/responsi%201
+//
+
 
 import java.util.Hashtable;
 import java.util.Random;
