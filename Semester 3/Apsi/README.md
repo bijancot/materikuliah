@@ -31,6 +31,9 @@ Sistem ini kami usulkan berdasar pada salah satu temuan kami di Cafe lain dimana
  - Bisa mengetahui tren Instagram berdasarkan lokasi
  - Bisa mengambil data pemirsa dari laman facebook page yang dimiliki cafe 
  - Bisa mengetahui wawasan pemirsa di laman facebook page yang dimiliki cafe
+ 
+ 
+ ---
  - Bisa mengetahui jam-jam ramai di laman facebook page yang dimiliki cafe
  - Bisa mendapatkan saran jam-jam yang tepat untuk memposting konten di sosial media
  - Bisa mengetahui data statistik laman facebook page yang dimiliki Cafe
