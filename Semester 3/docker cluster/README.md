@@ -2,7 +2,7 @@
 
 tujuan dibuat project ini adalah untuk membuat sebuah cluster mysql dengan mysql-cluster. mysql-cluster sendiri adalah versi mysql yang berbentuk cluster dan terdistribusi. Aplikasi ini sudah memenuhi beberapa aspek tentang database (basis data) yang sudah terdistribusi.
 
-# TO - DO
+## TO - DO
 
 * Membuat file YAML untuk docker compose 
 * Menambahkan custom docker volume
