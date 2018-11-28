@@ -9,9 +9,9 @@ import java.sql.ResultSet;
 public class JavaCRUD {
 
     static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
-    static final String DB_URL = "jdbc:mysql://localhost/perpustakaan";
-    static final String USER = "root";
-    static final String PASS = "kopi";
+    static final String DB_URL = "jdbc:mysql://172.17.0.2/slim_api";
+    static final String USER = "budosen";
+    static final String PASS = "bijan2089";
 
     static Connection conn;
     static Statement stmt;
