@@ -10,10 +10,10 @@ Repository ini berisi file - file yang merupakan bagian dari Tugas Akhir untuk m
 
 
 ### TODO :
-	- Membuat sequence diagram
-	- membuat ERD
-	- meminta tanda tangan pengelola ntuk dikumen SAD
-	- membuat mockup
-	- membuat file presentasi
+- Membuat sequence diagram
+- membuat ERD
+- meminta tanda tangan pengelola ntuk dikumen SAD
+- membuat mockup
+- membuat file presentasi
 
 #### Panjibaskoro & co.  &copy; 2018 
