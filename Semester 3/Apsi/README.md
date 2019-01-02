@@ -5,8 +5,8 @@ Repository ini berisi file - file yang merupakan bagian dari Tugas Akhir untuk m
 ### Progress
 
 <b>30-12-2018 </b> Membuat Use-case diagram<br/>
-<b>01-12-2018 </b> Activity Diagram sudah dibuat<br/>
-<b>02-12-2018 </b> Mulai membuat class diagram
+<b>01-01-2019 </b> Activity Diagram sudah dibuat<br/>
+<b>02-01-2019 </b> Mulai membuat class diagram
 
 
 ### TODO :
