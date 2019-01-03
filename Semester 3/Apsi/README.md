@@ -9,7 +9,8 @@ Repository ini berisi file - file yang merupakan bagian dari Tugas Akhir untuk m
 <b>02-01-2019 </b> Mulai membuat class diagram<br/>
 <b>02-01-2019 </b> Class Diagram Selesai<br/>
 <b>02-01-2019 </b> Mulai mempelajari lagi Sequence Diagram<br/>
-<b>03-01-2019 </b> Mulai pengerjaan Sequence diagram bagian sistim login & sedikit perubahan untuk Class Diagram<br/>
+<b>03-01-2019 </b> Mulai pengerjaan Sequence diagram bagian sistim login <br/>
+<b>03-01-2019 </b> Sedikit perubahan untuk Class Diagram<br/>
 <b>03-01-2019 </b> Mulai mengerjakan mockup/wireframe
 
 ### TODO :
