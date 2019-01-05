@@ -11,13 +11,14 @@ Repository ini berisi file - file yang merupakan bagian dari Tugas Akhir untuk m
 <b>02-01-2019 </b> Mulai mempelajari lagi Sequence Diagram<br/>
 <b>03-01-2019 </b> Mulai pengerjaan Sequence diagram bagian sistim login <br/>
 <b>03-01-2019 </b> Sedikit perubahan untuk Class Diagram<br/>
-<b>03-01-2019 </b> Mulai mengerjakan mockup/wireframe
+<b>03-01-2019 </b> Mulai mengerjakan mockup/wireframe<br/>
+<b>05-01-2019 </b> Mockup/Wireframe Selesai
 
 ### TODO :
 - Membuat sequence diagram [On progress 03-01-2019]
 - membuat ERD
 - meminta tanda tangan pengelola untuk dokumen SAD
-- membuat mockup/wireframe [On progress 03-01-2019]
+- membuat mockup/wireframe [On progress 03-01-2019][DONE 05-01-2019]
 - membuat file presentasi
 
 #### Panjibaskoro & co.  &copy; 2018 
