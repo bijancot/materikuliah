@@ -16,9 +16,9 @@ Repository ini berisi file - file yang merupakan bagian dari Tugas Akhir untuk m
 <b>06-01-2019 </b> ERD selesai
 
 ### TODO :
-- Membuat sequence diagram [<b>On progress 03-01-2019</b>][<b>REVISI 06-01-2019</b>]
+- Membuat sequence diagram [<b>On progress 03-01-2019</b>][<b>REVISI 06-01-2019</b>][<b>DONE 10-01-2018</b>]
 - membuat ERD [<b>DONE 06-01-2019</b>]
-- meminta tanda tangan pengelola untuk dokumen SAD
+- meminta tanda tangan pengelola untuk dokumen SAD[<b>DONE 10-01-2019</b>]
 - membuat mockup/wireframe [<b>On progress 03-01-2019</b>][<b>DONE 05-01-2019</b>]
 - membuat file presentasi
 
