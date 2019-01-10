@@ -5,4 +5,5 @@ Sequence diagram dari Sistem Informasi yang akan kami kembangkan untuk SS Cafe T
 ### Notes :
 - diagram ini terdiri dari:
     - diagram awal ketika user login
+- folder old berisi file sebelum direvisi
 

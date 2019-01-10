@@ -6,4 +6,5 @@ Activity diagram dari Sistem Informasi yang akan kami kembangkan untuk SS Cafe T
 - ada 2 diagram yaitu 
     - Before : sebelum diterapkan sistem informasi yang kami rancang
     - After : setelah diterapkan sistem informasi yang kami rancang
+- folder old berisi file sebelum direvisi
 
