@@ -12,5 +12,11 @@ pada repository ini terdapat beberapa materi dan tugas-tugas yang saya kumpulkan
 - Sistem Operasi
 - Praktikum Sistem Operasi
 
-##### &copy; 2018 Panji Iman Baskoro
-##### website https://panjibaskoro.web.id
+untuk Mata kuliah Pemprograman Dasar II & Praktikum Pemprograman Dasar II terdapat proyek untuk tugas akhir semester, yaitu :
+
+- <a href="https://github.com/bijancot/JavaLocalStorage"> Java Local Storage With Java</a> untuk mata kuliah Praktikum Pemprograman Dasar II
+- <a href="https://github.com/bijancot/VacationSuggest"> Vacation Suggest with Java </a> untuk mata kuliah Pemprograman Dasar II
+
+detil dari setiap proyek bisa dilihat dimasing-masing repository
+
+##### &copy; 2018 Panji Iman Baskoro https://panjibaskoro.web.id
