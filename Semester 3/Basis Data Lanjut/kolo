@@ -1,0 +1,156 @@
+Kami memilih melkukan proses replicasi pada mysql. Kami memilih paket yang sudah didukung oleh pengembang mysql sendiri, yaitu mysql-cluster dimana paket ini menggunakan engine NDB yang memang dikususkan untuk clustering dengan fault tolerance yang sangat tinggi. Kami menjalankan cluster tersebut diatas docker agar lebih hemat sumber daya. Cluster yang kami bangun memiliki topologi seperti berikut: 
+
+
+
+::foto::
+
+
+
+Proses - proses yang kami lakukan adalah sebagai berikut:
+
+1. clone & modifikasi repo mysql-cluster untuk docker 
+    modifikasi yang kami lakukan adalah mengkonfigurasi ulang IP yang digunakan oleh cluster dibeberapa file konfigurasi yaitu file my.cnf & file mysql-cluster.cnf link github ada di: https://github.com/mysql/mysql-docker/tree/mysql-cluster
+
+2. build image docker menggunakan perintah docker build -t wongko/mysqlcluster:latest . dimana wongko/mysqlcluster adalah repo hub.docker.com milik saya dan . menandakan       
+    lokasi file docker file yang ingin saya build.
+
+3. Setelah build selesai kami jalankan berintah seperti di bawah mengikuti panduan yang ada di laman https://hub.docker.com/r/mysql/mysql-cluster/ yang sudah kami modifikasi 
+    speerti berikut :
+    . docker network create cluster --subnet=192.168.10.0/16
+    . docker run -d --net=cluster --name=management1 --ip=192.168.10.2 wongko/mysqlcluster ndb_mgmd <untuk management cluster-node>
+    . docker run -d --net=cluster --name=ndb1 --ip=192.168.10.3  wongko/mysqlcluster ndbd <untuk datanode ke-1>
+    . docker run -d --net=cluster --name=ndb2 --ip=192.168.10.4  wongko/mysqlcluster ndbd <untuk datanode ke-2>
+    . docker run -d --net=cluster --name=mysql1 --ip=192.168.10.10  -e MYSQL_ROOT_PASSWORD=bijan wongko/mysqlcluster mysqld <untuk mysql-client>
+
+4.5 cek network gambar di bawah 
+
+
+4. Kemudian kami membuat user baru beserta privileges yang akan kami gunakan di aplikasi mysql-client seperti mysql workbench seperti berikut :
+
+        
+
+5. Kemudian kami buat database baru dan beberapa data untuk pengecekan Kemudian kami masuk ke dalam salah satu datanode dan menemukan data-data yang sudah di fragmentasi 
+
+        copy output di bash ndb1
+
+6. Selesai
+
+
+
+script [abaikan]
+
+mysql> SHOW ENGINE NDB STATUS \G
+*************************** 1. row ***************************
+  Type: ndbcluster
+  Name: connection
+Status: cluster_node_id=0, connected_host=192.168.10.2, connected_port=1186, number_of_data_nodes=0, number_of_ready_data_nodes=0, connect_count=0
+*************************** 2. row ***************************
+  Type: ndbcluster
+  Name: NdbTransaction
+Status: created=1, free=1, sizeof=368
+*************************** 3. row ***************************
+  Type: ndbcluster
+  Name: NdbOperation
+Status: created=1, free=1, sizeof=944
+*************************** 4. row ***************************
+  Type: ndbcluster
+  Name: NdbIndexScanOperation
+Status: created=0, free=0, sizeof=1152
+*************************** 5. row ***************************
+  Type: ndbcluster
+  Name: NdbIndexOperation
+Status: created=0, free=0, sizeof=952
+*************************** 6. row ***************************
+  Type: ndbcluster
+  Name: NdbRecAttr
+Status: created=0, free=0, sizeof=88
+*************************** 7. row ***************************
+  Type: ndbcluster
+  Name: NdbApiSignal
+Status: created=16, free=16, sizeof=144
+*************************** 8. row ***************************
+  Type: ndbcluster
+  Name: NdbLabel
+Status: created=0, free=0, sizeof=200
+*************************** 9. row ***************************
+  Type: ndbcluster
+  Name: NdbBranch
+Status: created=0, free=0, sizeof=32
+*************************** 10. row ***************************
+  Type: ndbcluster
+  Name: NdbSubroutine
+Status: created=0, free=0, sizeof=72
+*************************** 11. row ***************************
+  Type: ndbcluster
+  Name: NdbCall
+Status: created=0, free=0, sizeof=24
+*************************** 12. row ***************************
+  Type: ndbcluster
+  Name: NdbBlob
+Status: created=0, free=0, sizeof=496
+*************************** 13. row ***************************
+  Type: ndbcluster
+  Name: NdbReceiver
+Status: created=0, free=0, sizeof=128
+*************************** 14. row ***************************
+  Type: ndbcluster
+  Name: NdbLockHandle
+Status: created=0, free=0, sizeof=48
+*************************** 15. row ***************************
+  Type: ndbcluster
+  Name: binlog
+Status: latest_epoch=0, latest_trans_epoch=0, latest_received_binlog_epoch=0, latest_handled_binlog_epoch=0, latest_applied_binlog_epoch=0
+15 rows in set (0.00 sec)
+
+
+root@budosen-pc:/home/budosen# docker run -it --net=cluster mysql/mysql-cluster ndb_mgm
+[Entrypoint] MySQL Docker Image 7.5.11-1.1.7-cluster
+[Entrypoint] Starting ndb_mgm
+-- NDB Cluster -- Management Client --
+ndb_mgm> show
+Connected to Management Server at: 192.168.10.2:1186
+Cluster Configuration
+---------------------
+[ndbd(NDB)]     2 node(s)
+id=2    @192.168.10.3  (mysql-5.7.23 ndb-7.5.11, Nodegroup: 0, *)
+id=3    @192.168.10.4  (mysql-5.7.23 ndb-7.5.11, Nodegroup: 0)
+
+[ndb_mgmd(MGM)] 1 node(s)
+id=1    @192.168.10.2  (mysql-5.7.23 ndb-7.5.11)
+
+[mysqld(API)]   1 node(s)
+id=4    @192.168.10.10  (mysql-5.7.23 ndb-7.5.11)
+
+ndb_mgm> 2 status
+Node 2: started (mysql-5.7.23 ndb-7.5.11)
+
+ndb_mgm> 3 status
+Node 3: started (mysql-5.7.23 ndb-7.5.11)
+
+ndb_mgm>
+
+
+
+mysql> create user 'budosen'@'%' identified by "bijan";
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> grant all privileges on *.* to 'budosen'@'%';
+Query OK, 0 rows affected (0.00 sec)
+
+
+bash-4.2# ls
+S0.FragLog  S10.FragLog  S12.FragLog  S14.FragLog  S2.FragLog  S4.FragLog  S6.FragLog  S8.FragLog
+S1.FragLog  S11.FragLog  S13.FragLog  S15.FragLog  S3.FragLog  S5.FragLog  S7.FragLog  S9.FragLog
+bash-4.2# pwd
+/var/lib/mysql/ndb_2_fs/D10/DBLQH
+bash-4.2#
+
+root@budosen-pc:/home/budosen# docker ps -a
+CONTAINER ID        IMAGE                 COMMAND                  CREATED             STATUS                     PORTS                                     NAMES
+44bce1c38e0d        wongko/mysqlcluster   "/entrypoint.sh ndb_…"   6 minutes ago       Exited (0) 5 minutes ago                                             adoring_newton
+30dbcb499138        wongko/mysqlcluster   "/entrypoint.sh mysq…"   8 minutes ago       Up 8 minutes (healthy)     1186/tcp, 2202/tcp, 3306/tcp, 33060/tcp   mysql1
+cf2419110239        wongko/mysqlcluster   "/entrypoint.sh ndbd"    8 minutes ago       Up 8 minutes (unhealthy)   1186/tcp, 2202/tcp, 3306/tcp, 33060/tcp   ndb2
+41e20c761e6d        wongko/mysqlcluster   "/entrypoint.sh ndbd"    8 minutes ago       Up 8 minutes (unhealthy)   1186/tcp, 2202/tcp, 3306/tcp, 33060/tcp   ndb1
+3e6157eead94        wongko/mysqlcluster   "/entrypoint.sh ndb_…"   8 minutes ago       Up 8 minutes (unhealthy)   1186/tcp, 2202/tcp, 3306/tcp, 33060/tcp   management1
+
+
