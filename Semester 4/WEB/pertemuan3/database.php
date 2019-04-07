@@ -2,7 +2,7 @@
 
 $user = "budosen";
 $pass = "bijan2089";
-$serv = "172.17.0.3";
+$serv = "172.17.0.4";
 $db   = "stikiaja";
 
 $mysqli = new mysqli($serv,$user,$pass,$db);

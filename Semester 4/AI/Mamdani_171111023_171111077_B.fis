@@ -1,0 +1,39 @@
+[System]
+Name='Mamdani_171111023_171111077_B'
+Type='mamdani'
+Version=2.0
+NumInputs=2
+NumOutputs=1
+NumRules=4
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='Permintaan'
+Range=[0 6000]
+NumMFs=2
+MF1='SEDIKIT':'trapmf',[-5400 -600 1000 5000]
+MF2='BANYAK':'trapmf',[1000 5000 6600 11400]
+
+[Input2]
+Name='Persediaan'
+Range=[0 700]
+NumMFs=2
+MF1='SEDIKIT':'trapmf',[-630 -70 100 600]
+MF2='BANYAK':'trapmf',[100 600 770 1330]
+
+[Output1]
+Name='ProduksiBarang'
+Range=[0 8000]
+NumMFs=2
+MF1='BERKURANG':'trapmf',[-7200 -800 2000 7000]
+MF2='BERTAMBAH':'trapmf',[2000 7000 8800 15200]
+
+[Rules]
+2 2, 2 (1) : 1
+1 1, 1 (1) : 1
+1 2, 1 (1) : 1
+2 1, 2 (1) : 1
