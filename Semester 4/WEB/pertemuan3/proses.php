@@ -15,7 +15,7 @@ if($param=="input"){
     $kode = $_POST['kode'];
     $harga= $_POST['harga'];    
     $yolo->execute();
-    header("Refresh: 5; url=index.php");
+    header("Refresh: 2; url=index.php");
 }if($param=="edit"){
     $ide = $_POST['id'];
     $yolo = $mysqli->prepare("UPDATE barang set kode=?,nama=?,harga=? where id=$ide");
@@ -24,7 +24,7 @@ if($param=="input"){
     $kode = $_POST['kode'];
     $harga= $_POST['harga'];    
     $yolo->execute();
-    header("Refresh: 5; url=index.php");
+    header("Refresh: 2; url=index.php");
 }if($_GET['param']=="hapus"){
     $yolo = $mysqli->prepare("DELETE FROM barang where id=?");
     $yolo->bind_param('s',$id);
