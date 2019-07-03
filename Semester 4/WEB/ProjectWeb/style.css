@@ -1,0 +1,161 @@
+body, html {
+	height: 100vh;
+}
+
+body {
+	margin: 0;
+	display: grid;
+	grid-template-columns: auto 30% 27% 27%;
+	grid-template-rows: auto 100% auto 10%;
+	grid-template-areas: 
+		"sidebar main main main"
+		"sidebar main main main";
+}
+
+aside {
+	grid-area: sidebar;
+	background-color: white;
+
+}
+
+aside img {
+	position: relative;
+	margin-left: 20px;
+	top: 40px;
+}
+
+aside p {
+	font-size: 20px;
+	position: relative;
+	top: 35px;
+}
+
+aside ul {
+	margin-left: -40px;
+}
+
+aside ul li {
+	list-style-type: none;
+	padding: 15px 10px;
+	border-bottom: 1px solid black;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.menu {
+	text-decoration: none;
+	color: black;
+}
+
+.actives {
+	background-color: #081193;
+	color: white;
+	text-decoration: none;
+}
+
+main {
+	grid-area: main;
+	background-color: #081193;
+	font-family: calibri;
+}
+
+main h1 {
+	color: white;
+	position: relative;
+	top: 5px;
+	left: 60px;
+}
+
+main form {
+	position: relative;
+	margin: 20px auto;
+	width: 320px;
+	color: white;
+}
+
+main input {
+	padding: 10px;
+}
+
+main input[type="text"] {
+	display: block;
+	margin-bottom: 25px;
+	width: 100%;
+	border: 2px solid black;
+	background: #FAF6D9;
+}
+
+main input[type="radio"] {
+	margin: 0 8px 8px 18px;
+}
+
+main input[type="radio"]:first-child {
+	margin-left: 0;
+}
+
+main input[type="radio"]:checked + label {
+	font-weight: bold;
+	font-size: 18px;
+}
+
+main input[name="SRegister"] {
+	width: 100%;
+	border: none;
+}
+
+main input[name="SRegister"]:focus {
+	width: 100%;
+	border: solid black;
+	background: white;
+	color: black;
+}
+
+main input:focus {
+	background: white;
+}
+
+main select {
+	margin-bottom: 25px;
+}
+
+form[name="forms"]{
+	height: 50%;
+	width: 85%;
+	margin-left: 6%;
+	margin-top: 3%;
+}
+
+.BSearch {
+	width: 10%;
+    position:relative;
+    padding:6px 15px;
+    top: -4px;
+    left:389px;
+    border:2px solid #53bd84;
+    background-color:#53bd84;
+    color:#fafafa;
+}
+
+.BSearch:hover  {
+    background-color:#fafafa;
+    color:#207cca;
+}
+
+.combopart {
+	margin: 30px 120px 220px 350px;			
+}
+
+table {
+	color: white;
+	margin: -110px 10px 10px 10px;
+	margin-left: -4px;	
+}
+
+table th {
+	text-align: center;
+}
+
+td a {
+	text-decoration: none;
+}

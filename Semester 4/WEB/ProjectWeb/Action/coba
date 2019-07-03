@@ -1,0 +1,13 @@
+<?php 	
+	$tampil=mysqli_query($konek,"SELECT * FROM golongan WHERE aktif='Y'");
+ 	if ($r[id_golongan]==0){
+    	echo "<option value=0 selected>- Pilih Kategori -</option>"; 
+    }   
+    while($w=mysqli_fetch_array($tampil)){
+        if ($r[id_golongan]==$w[id_golongan]){
+            echo "<option value=$w[id_golongan] selected>$w[golongan]</option>";
+        } else {
+            echo "<option value=$w[id_golongan]>$w[golongan]</option> </p> ";
+        }
+    }
+?>
