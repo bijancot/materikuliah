@@ -1,0 +1,4 @@
+INDEX VERSION 1.130+/mnt/b2c7efbf-ef52-437d-8ca7-e46ea581cbba/Me/Kuliah/materikuliah/Semester 5/android/android-testing-eclipse/.metadata/.plugins/org.eclipse.jdt.core
+839531908.index
+1392549303.index
+4230571745.index

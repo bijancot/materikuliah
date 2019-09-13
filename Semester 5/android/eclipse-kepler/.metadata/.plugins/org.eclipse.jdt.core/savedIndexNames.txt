@@ -1,0 +1,4 @@
+INDEX VERSION 1.130+/mnt/b2c7efbf-ef52-437d-8ca7-e46ea581cbba/Me/Kuliah/materikuliah/Semester 5/android/eclipse-kepler/.metadata/.plugins/org.eclipse.jdt.core
+502732891.index
+2744878784.index
+195575231.index
