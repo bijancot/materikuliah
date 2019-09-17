@@ -1,0 +1,31 @@
+Perlengkapan kebutuhan Lomba :
+1. PC Server dengan spesifikasi minimal
+	- Intel Core i3 Gen 5
+	- RAM 8GB
+	- HDD >32GB dalam kondisi kosong dan harus diberikan kepada panitia H-1 Perlombaan untuk pengecekan
+	- Monitor 
+	- Keyboard
+2. Flashdisk 8GB kosong dalam kondisi kosong dan harus diberikan kepada panitia H-1 Perlombaan untuk pengecekan
+3. Notebook client
+	- OS Windows 7
+	- HDD Minimal 64GB
+	- RAM 2GB
+	- Keaadaan Notebook kosong tanpa terinstall aplikasi apapun (Fresh Install)
+4. MikroTik RB951UI dengan adapter wireless
+5. Router Wireless / Access point @ 1
+6. Kabel lan berum terkrimping dengan panjang -/+ 50cm @ 2
+7. connector RJ45 @ 4
+8. Tang Krimping dan perlengkapan lain untuk proses cabling
+9. Terminal listrik dengan jumlah steker disesuaikan
+
+Kriteria Penilaian : 
+
+1. Penilaian dilakukan oleh tim juri yang telah ditetapkan oleh panitia SSC 2019
+2. Poin yang akan dipertimbangkan untuk penilaian :
+	- Pemahaman peserta terhadap soal yang telah diberikan
+	- Konfigurasi server, network, dan client
+	- Troubleshooting
+3. Keputusan juri tidak dapat diganggu gugat
+4. Peserta akan didiskualifikasi jika didapati melakukan kecurangan didalam perlombaan
+5. Juri dapat merubah peraturan sewaktu-waktu jika diperlukan
+
