@@ -1,0 +1,19 @@
+draft tanggal 29 Septembe :
+
+Requirements : 
+docker sudah dalam kondisi terinstall
+akun docker hub
+akun github
+
+
+review materi
+berkenalan dengan perintah dasar
+berkenalan dengan docker networking
+	- create and setting network
+pull an images from docker hub
+various way to build docker images
+	- build it natively
+		- using docker hub and some tagging things
+	- build it with dockerfile (semi automatic)
+	- build it with dockerfile and dockerhub auto build and github
+case study
