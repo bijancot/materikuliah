@@ -1,0 +1,3 @@
+Krimping Kabel 10%
+Installasi & Konfigurasi Server (Web, DNS, SSH, SFTP, IPtables dll) 70%
+Troubleshooting 20%	
