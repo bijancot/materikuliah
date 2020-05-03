@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>Jauh guys</name>
+	<gx:CascadingStyle kml:id="__managed_style_0D1B75278D1282C23683">
+		<Style>
+			<IconStyle>
+				<scale>1.2</scale>
+				<Icon>
+					<href>https://earth.google.com/earth/rpc/cc/icon?color=1976d2&amp;id=2000&amp;scale=4</href>
+				</Icon>
+				<hotSpot x="64" y="128" xunits="pixels" yunits="insetPixels"/>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff2dc0fb</color>
+				<width>6</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+			<BalloonStyle>
+				<displayMode>hide</displayMode>
+			</BalloonStyle>
+		</Style>
+	</gx:CascadingStyle>
+	<gx:CascadingStyle kml:id="__managed_style_16172C01281282C23682">
+		<Style>
+			<IconStyle>
+				<Icon>
+					<href>https://earth.google.com/earth/rpc/cc/icon?color=1976d2&amp;id=2000&amp;scale=4</href>
+				</Icon>
+				<hotSpot x="64" y="128" xunits="pixels" yunits="insetPixels"/>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff2dc0fb</color>
+				<width>4</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+			<BalloonStyle>
+				<displayMode>hide</displayMode>
+			</BalloonStyle>
+		</Style>
+	</gx:CascadingStyle>
+	<StyleMap id="__managed_style_02192ACFF51282C23682">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#__managed_style_16172C01281282C23682</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#__managed_style_0D1B75278D1282C23683</styleUrl>
+		</Pair>
+	</StyleMap>
+	<gx:CascadingStyle kml:id="__managed_style_2E645CE31812823CBB5D">
+		<Style>
+			<IconStyle>
+				<scale>1.2</scale>
+				<Icon>
+					<href>https://earth.google.com/earth/rpc/cc/icon?color=fbc02d&amp;id=2000&amp;scale=4</href>
+				</Icon>
+				<hotSpot x="64" y="128" xunits="pixels" yunits="insetPixels"/>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff2dc0fb</color>
+				<width>6</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+			<BalloonStyle>
+				<gx:displayMode>card</gx:displayMode>
+			</BalloonStyle>
+		</Style>
+	</gx:CascadingStyle>
+	<gx:CascadingStyle kml:id="__managed_style_1F1371762712823CBB5D">
+		<Style>
+			<IconStyle>
+				<Icon>
+					<href>https://earth.google.com/earth/rpc/cc/icon?color=fbc02d&amp;id=2000&amp;scale=4</href>
+				</Icon>
+				<hotSpot x="64" y="128" xunits="pixels" yunits="insetPixels"/>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff2dc0fb</color>
+				<width>4</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+			<BalloonStyle>
+				<gx:displayMode>card</gx:displayMode>
+			</BalloonStyle>
+		</Style>
+	</gx:CascadingStyle>
+	<StyleMap id="__managed_style_0448260D5E12823CBB5D">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#__managed_style_1F1371762712823CBB5D</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#__managed_style_2E645CE31812823CBB5D</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Placemark id="04CF8A971112823CBAFB">
+		<name>Malang KA</name>
+		<gx:mid>/m/05zq1ph</gx:mid>
+		<gx:fid>0x2dd6283c23033f7b:0x87ddccf5aaaf9314</gx:fid>
+		<LookAt>
+			<longitude>112.637056</longitude>
+			<latitude>-7.977499100000002</latitude>
+			<altitude>0</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>1045.103909246243</range>
+			<altitudeMode>relativeToGround</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_0448260D5E12823CBB5D</styleUrl>
+		<Point>
+			<altitudeMode>relativeToGround</altitudeMode>
+			<coordinates>112.637056,-7.977499100000001,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="033EA5F4F312823D29FA">
+		<name>Malang Town Square</name>
+		<gx:mid>/g/1239_8vm</gx:mid>
+		<gx:fid>0x2e78831c3bed0e97:0x2ae9e42172003648</gx:fid>
+		<LookAt>
+			<longitude>112.6186804</longitude>
+			<latitude>-7.9569547</latitude>
+			<altitude>0</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>1045.16259276083</range>
+			<altitudeMode>relativeToGround</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_0448260D5E12823CBB5D</styleUrl>
+		<Point>
+			<altitudeMode>relativeToGround</altitudeMode>
+			<coordinates>112.6186804,-7.9569547,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0A0A95317E1282C23681">
+		<name>Malang KA -Matos</name>
+		<LookAt>
+			<longitude>112.6184294781859</longitude>
+			<latitude>-7.958122547553985</latitude>
+			<altitude>485.3722792447173</altitude>
+			<heading>35.58585396663558</heading>
+			<tilt>0.2341132510427033</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>1515.640888002526</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_02192ACFF51282C23682</styleUrl>
+		<LineString>
+			<coordinates>
+				112.6366541587576,-7.977507542609377,450.3959878418378 112.6347402057203,-7.977176273153993,453.3314914891689 112.6343419629347,-7.977837136184013,450.9260588431887 112.6338526775187,-7.977749607830804,451.1341934590957 112.6333390568874,-7.976986576399661,453.6175653126273 112.6293657741787,-7.976415113178016,451.4339649820657 112.6298046672047,-7.974239239139143,449.4195574487447 112.6286611559368,-7.972987772312459,455.6794455688046 112.6286525041537,-7.970750138718049,459.1566782755227 112.6289814061959,-7.969012543987697,460.8138879907875 112.6288842457196,-7.967542075949922,462.0698563520779 112.628656935249,-7.966261980977779,460.5111900752132 112.6277502963448,-7.964776512667867,461.3819195951147 112.6261338881843,-7.962414720662134,465.5979274381455 112.6233009799541,-7.96125518295722,475.5666170210187 112.6204682376207,-7.958922198594483,480.8513326646585 112.6173219398338,-7.957056386067166,486.543646803587 112.6163648816927,-7.956550209107063,487.7931379708415 112.6164399545839,-7.956338042670112,488.174359845956 112.6183404804233,-7.95748104257505,486.1471879542825 
+			</coordinates>
+		</LineString>
+	</Placemark>
+</Document>
+</kml>
